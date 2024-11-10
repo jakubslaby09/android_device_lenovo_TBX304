@@ -34,8 +34,8 @@ $(call inherit-product, vendor/lineage/config/common_car.mk)
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_NAME := lineage_TBX304
-PRODUCT_DEVICE := TBX304
+PRODUCT_NAME := lineage_tbx304
+PRODUCT_DEVICE := tbx304
 PRODUCT_BRAND := Lenovo
 PRODUCT_MODEL := Lenovo TB-X304L
 PRODUCT_MANUFACTURER := Lenovo
