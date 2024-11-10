@@ -31,7 +31,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/lenovo/TBX304/device.mk)
+$(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_TBX304
@@ -41,9 +41,8 @@ PRODUCT_MODEL := Lenovo TB-X304L
 PRODUCT_MANUFACTURER := Lenovo
 
 PRODUCT_GMS_CLIENTID_BASE := android-lenovo
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="hq_msm8917-user 8.1.0 OPM1.171019.026 1418 release-keys" \
-    TARGET_DEVICE="TB-X304L"
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 BUILD_FINGERPRINT := Lenovo/LenovoTB-X304L/X304L:8.1.0/OPM1.171019.026/S001017_190709_ROW:user/release-keys
+
+USE_CAMERA_STUB := true

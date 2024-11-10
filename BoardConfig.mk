@@ -14,10 +14,13 @@
 # limitations under the License.
 #
 
-# inherit from common tb-common
--include device/lenovo/tb-common/BoardConfigCommon.mk
+DEVICE_PATH := device/tbx304
 
-DEVICE_PATH := device/lenovo/TBX304
+# TODO: move vendor binaries to Android.bp modules
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
+# inherit from common tb-common
+include $(DEVICE_PATH)/../tb-common/BoardConfigCommon.mk
 
 # Asserts
 TARGET_OTA_ASSERT_DEVICE := TB-X304X,TB-X304L,TB-X304F,TBX304,tb_x304x,tb_x304l,tb_x304f,tb_x304
@@ -44,7 +47,7 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 9921059840 # 9921076224 - 16384
 TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/GT9110P/gt9110p/gesture"
 
 # SELinux
-BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
 # Inherit from the proprietary version
 -include vendor/lenovo/TBX304/BoardConfigVendor.mk

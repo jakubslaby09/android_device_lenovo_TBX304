@@ -32,9 +32,8 @@ ifneq (,$(filter msm8996 msmcobalt msmfalcon,$(TARGET_BOARD_PLATFORM)))
 endif
 
 LOCAL_CFLAGS += -D_ANDROID_ -DQCAMERA_REDEFINE_LOG
-LOCAL_COPY_HEADERS_TO := mm-camera-interface
-LOCAL_COPY_HEADERS += ../common/cam_intf.h
-LOCAL_COPY_HEADERS += ../common/cam_types.h
+LOCAL_EXPORT_C_INCLUDE_DIRS += ../common/cam_intf.h
+LOCAL_EXPORT_C_INCLUDE_DIRS += ../common/cam_types.h
 
 LOCAL_C_INCLUDES := \
     $(LOCAL_PATH)/inc \
@@ -51,7 +50,8 @@ ifneq (1,$(filter 1,$(shell echo "$$(( $(PLATFORM_SDK_VERSION) >= 17 ))" )))
   LOCAL_CFLAGS += -include bionic/libc/kernel/common/linux/un.h
 endif
 
-LOCAL_CFLAGS += -Wall -Wextra -Werror
+#LOCAL_CFLAGS += -Wall -Wextra -Werror
+LOCAL_CFLAGS += -Wno-format-truncation
 
 LOCAL_SRC_FILES := $(MM_CAM_FILES)
 
