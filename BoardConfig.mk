@@ -19,7 +19,7 @@ DEVICE_PATH := device/tbx304
 # inherit from common tb-common
 -include $(DEVICE_PATH)/../tb-common/BoardConfigCommon.mk# Asserts
 
-TARGET_OTA_ASSERT_DEVICE := TB-X304X,TB-X304L,TB-X304F,TBX304,tb_x304x,tb_x304l,tb_x304f,tb_x304
+TARGET_OTA_ASSERT_DEVICE := TB-X304X,TB-X304L,TB-X304F,TBX304,tbx304,tb_x304x,tb_x304l,tb_x304f,tb_x304
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
