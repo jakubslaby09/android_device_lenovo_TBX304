@@ -45,4 +45,4 @@ PRODUCT_COPY_FILES += \
 -include $(LOCAL_PATH)/vendor_prop.mk
 
 # Inherit from tb-common
-$(call inherit-product, device/lenovo/tb-common/tb.mk)
+$(call inherit-product, $(LOCAL_PATH)/../tb-common/tb.mk)

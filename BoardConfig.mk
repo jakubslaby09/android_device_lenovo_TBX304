@@ -14,12 +14,11 @@
 # limitations under the License.
 #
 
+DEVICE_PATH := device/tbx304
+
 # inherit from common tb-common
--include device/lenovo/tb-common/BoardConfigCommon.mk
+-include $(DEVICE_PATH)/../tb-common/BoardConfigCommon.mk# Asserts
 
-DEVICE_PATH := device/lenovo/TBX304
-
-# Asserts
 TARGET_OTA_ASSERT_DEVICE := TB-X304X,TB-X304L,TB-X304F,TBX304,tb_x304x,tb_x304l,tb_x304f,tb_x304
 
 # Bluetooth
