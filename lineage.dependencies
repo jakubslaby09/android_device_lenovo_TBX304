@@ -2,5 +2,10 @@
   {
     "repository": "android_device_lenovo_tb-common",
     "target_path": "device/lenovo/tb-common"
+  },
+  {
+    "repository": "LineageOS/android_device_lineage_car",
+    "target_path": "device/lineage/car",
+    "branch": "lineage-18.1"
   }
 ]
