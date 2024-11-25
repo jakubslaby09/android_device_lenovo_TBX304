@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+DEVICE_COMMON := device/tb-common
+
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
@@ -45,4 +47,4 @@ PRODUCT_COPY_FILES += \
 -include $(LOCAL_PATH)/vendor_prop.mk
 
 # Inherit from tb-common
-$(call inherit-product, $(LOCAL_PATH)/../tb-common/tb.mk)
+$(call inherit-product, $(DEVICE_COMMON)/tb.mk)
